@@ -1,0 +1,3 @@
+[submodule "fastapi-issue-tracker"]
+	path = fastapi-issue-tracker
+	url = https://github.com/gourav02/fastapi-issue-tracker.git

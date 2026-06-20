@@ -1,0 +1,15 @@
+{
+  "name": "strategy-pattern",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "scripts": {
+    "start": "ts-node Demo.ts",
+    "build": "tsc",
+    "dev": "ts-node Demo.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^25.9.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^6.0.3"
+  }
+}
