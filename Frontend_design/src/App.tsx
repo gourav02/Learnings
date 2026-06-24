@@ -8,10 +8,18 @@
 
 // import ClickCounterThree from '../Custom-Hook/clickCounterThree'
 
-import {Counter} from '../useReducer/Counter'
-
+import { Provider } from 'react-redux'
+// import {Counter} from '../useReducer/Counter'
+import {Counterr} from '../RTK/Counterr';
+import {store} from '../RTK/store'
+import { QueryClientProvider, QueryClient } from '@tanstack/react-query';
+import {Demo} from '../React-Query/Demo';
 const App = () => {
+
+  const queryCLient = new QueryClient();
   return (
+    <QueryClientProvider client={queryCLient}>
+    <Provider store={store}>
     <div style={{ display: 'flex', flexDirection: 'column', gap: '40px', padding: '20px' }}>
       {/* <div>
         <h2>Compound Components</h2>
@@ -41,10 +49,13 @@ const App = () => {
         <div style={{ display: 'flex', gap: '20px' }}>
           {/* <ClickCounterThree /> */}
           {/* <HoverCounterTwo /> */}
-          <Counter />
+          {/* <Counterr /> */}
+          <Demo />
         </div>
       </div>
     </div>
+    </Provider>
+    </QueryClientProvider>
   )
 }
 
